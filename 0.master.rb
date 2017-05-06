@@ -9,8 +9,8 @@ class Tray
   def acceptable?(item)
     @rect.acceptable?(item)
   end
-  def storage(orders)
-    @rect.storage(orders)
+  def storage(orders, master)
+    @rect.storage(orders, master)
   end
 end
 
@@ -30,30 +30,64 @@ class Rect
       (item.width <= @depth && item.depth <= @width)
     )
   end
-  def storage(orders)
-    item = orders.find{|order| @rect.acceptable?(order)}
-    orders.delete(item)
-    set_item(item, orders)
+  def storage(orders, master)
+    item = orders.find{|order| acceptable?(order)}
+    if !item then
+      @dead = true
+    else
+      @item = item
+      orders.delete(@item)
+      set_inner(@item, orders, master)
+    end
   end
-  def set_item(item, orders)
-    candies = []
-    candies += get_rect_plan(item)
-    candies.sort!{|a, b|
-      #TODO: デッドスペースの面積の少ない順
-      a <=> b
-
+  def set_inner(item, orders, master)
+    plans = get_rect_plan(item, master)
+    #scorering
+    plans.each{|plan|
+      p plan
+      plan[:score] = plan[:inner].each{|rect|
+        master.items.count{|item| rect.acceptable?(item) }
+      }
+    }
+    plan = plans.sort{|a, b|
+      #句形の少ない順→受け入れアイテムの多い順
+      a[:inner].count <=> b[:inner].count ||
+      b.score <=> a.score
+    }.shift
+    item.rotate if plan[:rotate]
+    @inner = plan[:inner]
+    @inner.each{|rect|
+      rect.storage(orders, master)
     }
   end
-  def get_rect_plan(item, rotate = false)#=> [plan]
+  def get_rect_plan(item, master, rotate = false)#=> [plan]
     plans = []
+    item.rotate if rotate
     if item.width == @width && item.depth == @depth then
+      inner = []
+      plans << { :rotate => rotate, :inner => inner, :score => nil }
     elsif item.width != @width && item.depth == @depth then
+      inner = [Rect.new(@height, @width - item.width, @depth)]
+      plans << { :rotate => rotate, :inner => inner, :score => nil }
     elsif item.width == @width && item.depth != @depth then
+      inner = [Rect.new(@height, @width, @depth - item.depth)]
+      plans << { :rotate => rotate, :inner => inner, :score => nil }
     else
+      inner = [
+        Rect.new(@height, @width, @depth - item.depth),
+        Rect.new(@height, @width - item.width, item.depth),
+      ]
+      plans << { :rotate => rotate, :inner => inner, :score => nil }
+      inner = [
+        Rect.new(@height, @width - item.width, @depth),
+        Rect.new(@height, item.width, @depth - item.depth),
+      ]
+      plans << { :rotate => rotate, :inner => inner, :score => nil }
     end
-
+    item.rotate if rotate
+    #rotated pattern?
     if !rotate && item.rotatable? then
-      plans += get_rect_plan(item, true)
+      plans += get_rect_plan(item, master, true)
     end
     plans
   end

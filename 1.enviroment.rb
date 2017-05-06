@@ -2,7 +2,7 @@
 require './0.master.rb'
 
 class Enviroment
-  attr_reader :order
+  attr_reader :master, :order
   def initialize(order={})
     @master = Master.new
     if order.empty? then
