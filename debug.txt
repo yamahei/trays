@@ -1,0 +1,309 @@
+* 今回のオーダー
+t:3x4 x 4
+■■■
+■■■
+■■■
+■■■
+
+t:2x3 x 4
+■■
+■■
+■■
+
+t:2x2 x 4
+■■
+■■
+
+r:3x4 x 4
+■■■
+■■■
+■■■
+■■■
+
+r:2x3 x 4
+■■
+■■
+■■
+
+r:2x2 x 4
+■■
+■■
+
+s:3x4 x 4
+■■■
+■■■
+■■■
+■■■
+
+s:2x3 x 4
+■■
+■■
+■■
+
+s:2x2 x 4
+■■
+■■
+
+[
+ 0	#<Item:0x00000001367788 @area=12, @depth=4, @width=3, @height=3, @name="t:3x4", @rotate=false>, 
+ 1	#<Item:0x000000013676e8 @area=12, @depth=4, @width=3, @height=3, @name="t:3x4", @rotate=false>, 
+ 2	#<Item:0x00000001367648 @area=12, @depth=4, @width=3, @height=3, @name="t:3x4", @rotate=false>, 
+ 3	#<Item:0x000000013675a8 @area=12, @depth=4, @width=3, @height=3, @name="t:3x4", @rotate=false>, 
+ 4	#<Item:0x000000013674e0 @area=6, @depth=3, @width=2, @height=3, @name="t:2x3", @rotate=false>, 
+ 5	#<Item:0x00000001367440 @area=6, @depth=3, @width=2, @height=3, @name="t:2x3", @rotate=false>, 
+ 6	#<Item:0x000000013673a0 @area=6, @depth=3, @width=2, @height=3, @name="t:2x3", @rotate=false>, 
+ 7	#<Item:0x00000001367300 @area=6, @depth=3, @width=2, @height=3, @name="t:2x3", @rotate=false>, 
+ 8	#<Item:0x00000001367260 @area=4, @depth=2, @width=2, @height=3, @name="t:2x2", @rotate=false>, 
+ 9	#<Item:0x000000013671c0 @area=4, @depth=2, @width=2, @height=3, @name="t:2x2", @rotate=false>, 
+10	#<Item:0x00000001367120 @area=4, @depth=2, @width=2, @height=3, @name="t:2x2", @rotate=false>, 
+11	#<Item:0x00000001367080 @area=4, @depth=2, @width=2, @height=3, @name="t:2x2", @rotate=false>, 
+12	#<Item:0x00000001366fb8 @area=12, @depth=4, @width=3, @height=2, @name="r:3x4", @rotate=false>, 
+13	#<Item:0x00000001366f18 @area=12, @depth=4, @width=3, @height=2, @name="r:3x4", @rotate=false>, 
+14	#<Item:0x00000001366e50 @area=12, @depth=4, @width=3, @height=2, @name="r:3x4", @rotate=false>, 
+15	#<Item:0x00000001366db0 @area=12, @depth=4, @width=3, @height=2, @name="r:3x4", @rotate=false>, 
+16	#<Item:0x00000001366d10 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+17	#<Item:0x00000001366bf8 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+18	#<Item:0x00000001366a90 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+19	#<Item:0x000000013669a0 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+20	#<Item:0x00000001366900 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+21	#<Item:0x00000001366860 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+22	#<Item:0x00000001366748 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+23	#<Item:0x00000001366608 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+24	#<Item:0x000000013664c8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+25	#<Item:0x000000013663d8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+26	#<Item:0x000000013662e8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+27	#<Item:0x000000013660e0 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+28	#<Item:0x00000001365cd0 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+29	#<Item:0x00000001365960 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+30	#<Item:0x000000013657d0 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+31	#<Item:0x00000001365730 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+32	#<Item:0x00000001365668 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+33	#<Item:0x00000001365578 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+34	#<Item:0x00000001364510 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+35	#<Item:0x00000001364330 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>
+]
+Tray: tall(H3 x W8 x D6)
+  Rect: H3 x W8 x D6 - Item: t:3x4(H3 x W3 x D4)
+    Rect: H3 x W8 x D2 - Item: t:2x3(H3 x W3 x D2)
+      Rect: H3 x W5 x D2 - Item: t:2x3(H3 x W3 x D2)
+        Rect: H3 x W2 x D2 - Item: t:2x2(H3 x W2 x D2)
+    Rect: H3 x W5 x D4 - Item: t:3x4(H3 x W3 x D4)
+      Rect: H3 x W2 x D4 - Item: t:2x3(H3 x W2 x D3)
+        Rect: H3 x W2 x D1 - none
+
+□□□□□□□□
+□□□□□□□□
+□□□□□□□□
+□□□□□□□□
+□□□□□□□□
+□□□□□□□□
+
+[
+ 0	#<Item:0x00000001367648 @area=12, @depth=4, @width=3, @height=3, @name="t:3x4", @rotate=false>, 
+ 1	#<Item:0x000000013675a8 @area=12, @depth=4, @width=3, @height=3, @name="t:3x4", @rotate=false>, 
+ 2	#<Item:0x00000001367300 @area=6, @depth=3, @width=2, @height=3, @name="t:2x3", @rotate=false>, 
+ 3	#<Item:0x000000013671c0 @area=4, @depth=2, @width=2, @height=3, @name="t:2x2", @rotate=false>, 
+ 4	#<Item:0x00000001367120 @area=4, @depth=2, @width=2, @height=3, @name="t:2x2", @rotate=false>, 
+ 5	#<Item:0x00000001367080 @area=4, @depth=2, @width=2, @height=3, @name="t:2x2", @rotate=false>, 
+ 6	#<Item:0x00000001366fb8 @area=12, @depth=4, @width=3, @height=2, @name="r:3x4", @rotate=false>, 
+ 7	#<Item:0x00000001366f18 @area=12, @depth=4, @width=3, @height=2, @name="r:3x4", @rotate=false>, 
+ 8	#<Item:0x00000001366e50 @area=12, @depth=4, @width=3, @height=2, @name="r:3x4", @rotate=false>, 
+ 9	#<Item:0x00000001366db0 @area=12, @depth=4, @width=3, @height=2, @name="r:3x4", @rotate=false>, 
+10	#<Item:0x00000001366d10 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+11	#<Item:0x00000001366bf8 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+12	#<Item:0x00000001366a90 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+13	#<Item:0x000000013669a0 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+14	#<Item:0x00000001366900 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+15	#<Item:0x00000001366860 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+16	#<Item:0x00000001366748 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+17	#<Item:0x00000001366608 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+18	#<Item:0x000000013664c8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+19	#<Item:0x000000013663d8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+20	#<Item:0x000000013662e8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+21	#<Item:0x000000013660e0 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+22	#<Item:0x00000001365cd0 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+23	#<Item:0x00000001365960 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+24	#<Item:0x000000013657d0 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+25	#<Item:0x00000001365730 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+26	#<Item:0x00000001365668 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+27	#<Item:0x00000001365578 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+28	#<Item:0x00000001364510 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+29	#<Item:0x00000001364330 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>
+]
+Tray: tall(H3 x W8 x D6)
+  Rect: H3 x W8 x D6 - Item: t:3x4(H3 x W3 x D4)
+    Rect: H3 x W8 x D2 - Item: t:2x3(H3 x W3 x D2)
+      Rect: H3 x W5 x D2 - Item: t:2x2(H3 x W2 x D2)
+        Rect: H3 x W3 x D2 - Item: t:2x2(H3 x W2 x D2)
+          Rect: H3 x W1 x D2 - none
+    Rect: H3 x W5 x D4 - Item: t:3x4(H3 x W3 x D4)
+      Rect: H3 x W2 x D4 - Item: t:2x2(H3 x W2 x D2)
+        Rect: H3 x W2 x D2 - Item: r:2x2(H2 x W2 x D2)
+
+[
+ 0	#<Item:0x00000001366fb8 @area=12, @depth=4, @width=3, @height=2, @name="r:3x4", @rotate=false>, 
+ 1	#<Item:0x00000001366f18 @area=12, @depth=4, @width=3, @height=2, @name="r:3x4", @rotate=false>, 
+ 2	#<Item:0x00000001366e50 @area=12, @depth=4, @width=3, @height=2, @name="r:3x4", @rotate=false>, 
+ 3	#<Item:0x00000001366db0 @area=12, @depth=4, @width=3, @height=2, @name="r:3x4", @rotate=false>, 
+ 4	#<Item:0x00000001366d10 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+ 5	#<Item:0x00000001366bf8 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+ 6	#<Item:0x00000001366a90 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+ 7	#<Item:0x000000013669a0 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+ 8	#<Item:0x00000001366860 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+ 9	#<Item:0x00000001366748 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+10	#<Item:0x00000001366608 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+11	#<Item:0x000000013664c8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+12	#<Item:0x000000013663d8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+13	#<Item:0x000000013662e8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+14	#<Item:0x000000013660e0 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+15	#<Item:0x00000001365cd0 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+16	#<Item:0x00000001365960 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+17	#<Item:0x000000013657d0 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+18	#<Item:0x00000001365730 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+19	#<Item:0x00000001365668 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+20	#<Item:0x00000001365578 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+21	#<Item:0x00000001364510 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+22	#<Item:0x00000001364330 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>
+]
+Tray: regular(H2 x W6 x D5)
+  Rect: H2 x W6 x D5 - Item: r:3x4(H2 x W3 x D4)
+    Rect: H2 x W6 x D1 - none
+    Rect: H2 x W3 x D4 - Item: r:3x4(H2 x W3 x D4)
+
+[
+ 0	#<Item:0x00000001366e50 @area=12, @depth=4, @width=3, @height=2, @name="r:3x4", @rotate=false>, 
+ 1	#<Item:0x00000001366db0 @area=12, @depth=4, @width=3, @height=2, @name="r:3x4", @rotate=false>, 
+ 2	#<Item:0x00000001366d10 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+ 3	#<Item:0x00000001366bf8 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+ 4	#<Item:0x00000001366a90 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+ 5	#<Item:0x000000013669a0 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+ 6	#<Item:0x00000001366860 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+ 7	#<Item:0x00000001366748 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+ 8	#<Item:0x00000001366608 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+ 9	#<Item:0x000000013664c8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+10	#<Item:0x000000013663d8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+11	#<Item:0x000000013662e8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+12	#<Item:0x000000013660e0 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+13	#<Item:0x00000001365cd0 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+14	#<Item:0x00000001365960 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+15	#<Item:0x000000013657d0 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+16	#<Item:0x00000001365730 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+17	#<Item:0x00000001365668 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+18	#<Item:0x00000001365578 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+19	#<Item:0x00000001364510 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+20	#<Item:0x00000001364330 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>
+]
+Tray: regular(H2 x W6 x D5)
+  Rect: H2 x W6 x D5 - Item: r:3x4(H2 x W3 x D4)
+    Rect: H2 x W6 x D1 - none
+    Rect: H2 x W3 x D4 - Item: r:3x4(H2 x W3 x D4)
+
+[
+ 0	#<Item:0x00000001366d10 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+ 1	#<Item:0x00000001366bf8 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+ 2	#<Item:0x00000001366a90 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+ 3	#<Item:0x000000013669a0 @area=6, @depth=3, @width=2, @height=2, @name="r:2x3", @rotate=false>, 
+ 4	#<Item:0x00000001366860 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+ 5	#<Item:0x00000001366748 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+ 6	#<Item:0x00000001366608 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+ 7	#<Item:0x000000013664c8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+ 8	#<Item:0x000000013663d8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+ 9	#<Item:0x000000013662e8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+10	#<Item:0x000000013660e0 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+11	#<Item:0x00000001365cd0 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+12	#<Item:0x00000001365960 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+13	#<Item:0x000000013657d0 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+14	#<Item:0x00000001365730 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+15	#<Item:0x00000001365668 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+16	#<Item:0x00000001365578 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+17	#<Item:0x00000001364510 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+18	#<Item:0x00000001364330 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>
+]
+Tray: regular(H2 x W6 x D5)
+  Rect: H2 x W6 x D5 - Item: r:2x3(H2 x W2 x D3)
+    Rect: H2 x W6 x D2 - Item: r:2x3(H2 x W3 x D2)
+      Rect: H2 x W3 x D2 - Item: r:2x3(H2 x W3 x D2)
+    Rect: H2 x W4 x D3 - Item: r:2x3(H2 x W2 x D3)
+      Rect: H2 x W2 x D3 - Item: r:2x2(H2 x W2 x D2)
+        Rect: H2 x W2 x D1 - none
+
+[
+ 0	#<Item:0x00000001366748 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+ 1	#<Item:0x00000001366608 @area=4, @depth=2, @width=2, @height=2, @name="r:2x2", @rotate=false>, 
+ 2	#<Item:0x000000013664c8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+ 3	#<Item:0x000000013663d8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+ 4	#<Item:0x000000013662e8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+ 5	#<Item:0x000000013660e0 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+ 6	#<Item:0x00000001365cd0 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+ 7	#<Item:0x00000001365960 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+ 8	#<Item:0x000000013657d0 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+ 9	#<Item:0x00000001365730 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+10	#<Item:0x00000001365668 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+11	#<Item:0x00000001365578 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+12	#<Item:0x00000001364510 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+13	#<Item:0x00000001364330 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>
+]
+Tray: regular(H2 x W6 x D5)
+  Rect: H2 x W6 x D5 - Item: r:2x2(H2 x W2 x D2)
+    Rect: H2 x W6 x D3 - Item: r:2x2(H2 x W2 x D2)
+      Rect: H2 x W6 x D1 - none
+      Rect: H2 x W4 x D2 - Item: s:2x3(H1 x W3 x D2)
+        Rect: H2 x W1 x D2 - none
+    Rect: H2 x W4 x D2 - Item: s:2x3(H1 x W3 x D2)
+      Rect: H2 x W1 x D2 - none
+
+[
+ 0	#<Item:0x000000013664c8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+ 1	#<Item:0x000000013663d8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+ 2	#<Item:0x000000013662e8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+ 3	#<Item:0x000000013660e0 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+ 4	#<Item:0x000000013657d0 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+ 5	#<Item:0x00000001365730 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+ 6	#<Item:0x00000001365668 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+ 7	#<Item:0x00000001365578 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+ 8	#<Item:0x00000001364510 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+ 9	#<Item:0x00000001364330 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>
+]
+Tray: short(H1 x W5 x D4)
+  Rect: H1 x W5 x D4 - Item: s:3x4(H1 x W3 x D4)
+    Rect: H1 x W2 x D4 - Item: s:2x3(H1 x W2 x D3)
+      Rect: H1 x W2 x D1 - none
+
+[
+ 0	#<Item:0x000000013663d8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+ 1	#<Item:0x000000013662e8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+ 2	#<Item:0x000000013660e0 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+ 3	#<Item:0x00000001365730 @area=6, @depth=3, @width=2, @height=1, @name="s:2x3", @rotate=false>, 
+ 4	#<Item:0x00000001365668 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+ 5	#<Item:0x00000001365578 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+ 6	#<Item:0x00000001364510 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+ 7	#<Item:0x00000001364330 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>
+]
+Tray: short(H1 x W5 x D4)
+  Rect: H1 x W5 x D4 - Item: s:3x4(H1 x W3 x D4)
+    Rect: H1 x W2 x D4 - Item: s:2x3(H1 x W2 x D3)
+      Rect: H1 x W2 x D1 - none
+
+[
+ 0	#<Item:0x000000013662e8 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+ 1	#<Item:0x000000013660e0 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+ 2	#<Item:0x00000001365668 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+ 3	#<Item:0x00000001365578 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+ 4	#<Item:0x00000001364510 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+ 5	#<Item:0x00000001364330 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>
+]
+Tray: short(H1 x W5 x D4)
+  Rect: H1 x W5 x D4 - Item: s:3x4(H1 x W3 x D4)
+    Rect: H1 x W2 x D4 - Item: s:2x2(H1 x W2 x D2)
+      Rect: H1 x W2 x D2 - Item: s:2x2(H1 x W2 x D2)
+
+[
+ 0	#<Item:0x000000013660e0 @area=12, @depth=4, @width=3, @height=1, @name="s:3x4", @rotate=false>, 
+ 1	#<Item:0x00000001364510 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>, 
+ 2	#<Item:0x00000001364330 @area=4, @depth=2, @width=2, @height=1, @name="s:2x2", @rotate=false>
+]
+Tray: short(H1 x W5 x D4)
+  Rect: H1 x W5 x D4 - Item: s:3x4(H1 x W3 x D4)
+    Rect: H1 x W2 x D4 - Item: s:2x2(H1 x W2 x D2)
+      Rect: H1 x W2 x D2 - Item: s:2x2(H1 x W2 x D2)
+

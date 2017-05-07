@@ -33,7 +33,7 @@ class Enviroment
     _order = []
     order.each{|name, count|
       count.times{
-        _order << @master.get_item_by_name(name)
+        _order << @master.get_item_by_name(name).clone
       }
     }
     _order.sort{|a, b|

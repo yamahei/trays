@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 class Tray
-  attr_reader :name, :height, :width, :depth, :area
+  attr_reader :name, :height, :width, :depth, :area, :rect
   def initialize(name, height, width, depth)
     @name, @height, @width, @depth, @area =
       name, height, width, depth, width * depth
@@ -11,6 +11,9 @@ class Tray
   end
   def storage(orders, master)
     @rect.storage(orders, master)
+  end
+  def size
+    "H#{@height} x W#{@width} x D#{@depth}"
   end
 end
 
@@ -44,7 +47,7 @@ class Rect
     plans = get_rect_plan(item, master)
     #scorering
     plans.each{|plan|
-      p plan
+      #p plan
       plan[:score] = plan[:inner].each{|rect|
         master.items.count{|item| rect.acceptable?(item) }
       }
@@ -91,9 +94,20 @@ class Rect
     end
     plans
   end
+
+  def size
+    "H#{@height} x W#{@width} x D#{@depth}"
+  end
+  def inspect(indent=1)
+    _indent = "  " * indent
+    _item = @item ? @item.to_s : "none"
+    _info = "#{_indent}Rect: #{size} - #{_item}"
+    @inner.each{|rect|
+      _info += "\n" + rect.inspect(indent + 1)
+    }
+    _info
+  end
 end
-
-
 
 class Item
   attr_reader :name, :height, :width, :depth, :area
@@ -101,6 +115,9 @@ class Item
     @name, @height, @width, @depth, @area =
       name, height, width, depth, width * depth
     @rotate = false
+  end
+  def clone
+    Item.new(@name, @height, @width, @depth)
   end
   def rotatable?
     @width != @depth
@@ -113,6 +130,12 @@ class Item
     aa = []
     @depth.times{ aa << "■" * @width }
     aa.join("\n")
+  end
+  def size
+    "H#{@height} x W#{@width} x D#{@depth}"
+  end
+  def to_s
+    "Item: #{@name}(#{size})"
   end
 end
 
