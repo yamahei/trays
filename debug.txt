@@ -91,13 +91,6 @@ Tray: tall(H3 x W8 x D6)
       Rect: H3 x W2 x D4 - Item: t:2x3(H3 x W2 x D3)
         Rect: H3 x W2 x D1 - none
 
-□□□□□□□□
-□□□□□□□□
-□□□□□□□□
-□□□□□□□□
-□□□□□□□□
-□□□□□□□□
-
 [
  0	#<Item:0x00000001367648 @area=12, @depth=4, @width=3, @height=3, @name="t:3x4", @rotate=false>, 
  1	#<Item:0x000000013675a8 @area=12, @depth=4, @width=3, @height=3, @name="t:3x4", @rotate=false>, 
