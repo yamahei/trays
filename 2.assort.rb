@@ -11,7 +11,6 @@ class Assort
     orders = @env.get_order
     #全アイテム配置終わるまで繰り返し
     while !orders.empty? do
-      p orders
       #先頭（大きい）のアイテムの高さに応じてトレイを選択
       tray = @env.get_tray_by_item(orders[0])
       #トレイに収納

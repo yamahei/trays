@@ -17,14 +17,14 @@ class Tray
   end
 end
 
-
-
 class Rect
+  attr_reader :height, :width, :depth, :area
   def initialize(height, width, depth)
     @height, @width, @depth, @area =
       height, width, depth, width * depth
     @item, @dead = nil, false
     @inner = []
+    raise RuntimeError.new('area under 0.') if @area < 0
   end
   def acceptable?(item)
     item.area <= @area &&
@@ -48,14 +48,26 @@ class Rect
     #scorering
     plans.each{|plan|
       #p plan
-      plan[:score] = plan[:inner].each{|rect|
-        master.items.count{|item| rect.acceptable?(item) }
-      }
+      #plan[:score] = plan[:inner].each{|rect|
+      #  master.items.count{|item| rect.acceptable?(item) }
+      #}
+      plan[:positive] = plan[:inner].map{|rect|
+        master.items.map{|_item|
+          rect.acceptable?(_item) ? _item.area : 0
+        }.max
+      }.max
+      plan[:negative] = plan[:inner].map{|rect|
+        master.items.all?{|_item|
+          !rect.acceptable?(_item)
+        } ? -rect.area : 0
+      }.min
     }
     plan = plans.sort{|a, b|
       #句形の少ない順→受け入れアイテムの多い順
+      b[:negative] <=> a[:negative] ||
+      b[:positive] <=> a[:positive] ||
       a[:inner].count <=> b[:inner].count ||
-      b.score <=> a.score
+      0
     }.shift
     item.rotate if plan[:rotate]
     @inner = plan[:inner]
@@ -68,24 +80,30 @@ class Rect
     item.rotate if rotate
     if item.width == @width && item.depth == @depth then
       inner = []
-      plans << { :rotate => rotate, :inner => inner, :score => nil }
+      plans << { :rotate => rotate, :inner => inner }
     elsif item.width != @width && item.depth == @depth then
       inner = [Rect.new(@height, @width - item.width, @depth)]
-      plans << { :rotate => rotate, :inner => inner, :score => nil }
+      plans << { :rotate => rotate, :inner => inner }
     elsif item.width == @width && item.depth != @depth then
       inner = [Rect.new(@height, @width, @depth - item.depth)]
-      plans << { :rotate => rotate, :inner => inner, :score => nil }
+      plans << { :rotate => rotate, :inner => inner }
     else
-      inner = [
-        Rect.new(@height, @width, @depth - item.depth),
-        Rect.new(@height, @width - item.width, item.depth),
-      ]
-      plans << { :rotate => rotate, :inner => inner, :score => nil }
-      inner = [
-        Rect.new(@height, @width - item.width, @depth),
-        Rect.new(@height, item.width, @depth - item.depth),
-      ]
-      plans << { :rotate => rotate, :inner => inner, :score => nil }
+      inner = []
+      if @depth - item.depth > 0 then
+        inner << Rect.new(@height, @width, @depth - item.depth)
+      end
+      if @width - item.width > 0 then
+        inner << Rect.new(@height, @width - item.width, item.depth)
+      end
+      plans << { :rotate => rotate, :inner => inner }
+      inner = []
+      if @width - item.width > 0 then
+        inner << Rect.new(@height, @width - item.width, @depth)
+      end
+      if @depth - item.depth > 0 then
+        inner << Rect.new(@height, item.width, @depth - item.depth)
+      end
+      plans << { :rotate => rotate, :inner => inner }
     end
     item.rotate if rotate
     #rotated pattern?
@@ -135,7 +153,7 @@ class Item
     "H#{@height} x W#{@width} x D#{@depth}"
   end
   def to_s
-    "Item: #{@name}(#{size})"
+    "Item: #{@name}(#{size})" + (@rotate ? "*R" : "")
   end
 end
 
