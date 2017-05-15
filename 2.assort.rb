@@ -2,8 +2,8 @@
 require './1.enviroment.rb'
 
 class Assort
-  def initialize
-    @env = Enviroment.new
+  def initialize(order={})
+    @env = Enviroment.new(order)
   end
 
   def do_layout
@@ -24,6 +24,7 @@ class Assort
 
   def puts_layout(tray)
     puts "Tray: #{tray.name}(#{tray.size})"
+    puts tray.performance
     puts tray.rect.inspect
     puts ""
   end

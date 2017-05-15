@@ -15,6 +15,11 @@ class Tray
   def size
     "H#{@height} x W#{@width} x D#{@depth}"
   end
+  def performance
+    capacity = @height * @width * @depth * 1.0
+    volume = @rect.volume * 1.0
+    volume / capacity * 100
+  end
 end
 
 class Rect
@@ -22,22 +27,23 @@ class Rect
   def initialize(height, width, depth)
     @height, @width, @depth, @area =
       height, width, depth, width * depth
-    @item, @dead = nil, false
-    @inner = []
+    @item, @inner = nil, []
     raise RuntimeError.new('area under 0.') if @area < 0
   end
   def acceptable?(item)
-    item.area <= @area &&
-    item.height <= @height && (
-      (item.width <= @width && item.depth <= @depth)||
-      (item.width <= @depth && item.depth <= @width)
-    )
+    return false if item.area > @area
+    return false if item.height > @height
+    if item.width <= @width && item.depth <= @depth then
+      return true
+    elsif item.width <= @depth && item.depth <= @width then
+      return true
+    else
+      return false
+    end
   end
   def storage(orders, master)
     item = orders.find{|order| acceptable?(order)}
-    if !item then
-      @dead = true
-    else
+    if item then
       @item = item
       orders.delete(@item)
       set_inner(@item, orders, master)
@@ -47,10 +53,6 @@ class Rect
     plans = get_rect_plan(item, master)
     #scorering
     plans.each{|plan|
-      #p plan
-      #plan[:score] = plan[:inner].each{|rect|
-      #  master.items.count{|item| rect.acceptable?(item) }
-      #}
       plan[:positive] = plan[:inner].map{|rect|
         master.items.map{|_item|
           rect.acceptable?(_item) ? _item.area : 0
@@ -63,9 +65,8 @@ class Rect
       }.min
     }
     plan = plans.sort{|a, b|
-      #句形の少ない順→受け入れアイテムの多い順
-      b[:negative] <=> a[:negative] ||
-      b[:positive] <=> a[:positive] ||
+      b[:negative] <=> a[:negative] || # dead space
+      b[:positive] <=> a[:positive] || # acceptable size
       a[:inner].count <=> b[:inner].count ||
       0
     }.shift
@@ -78,13 +79,15 @@ class Rect
   def get_rect_plan(item, master, rotate = false)#=> [plan]
     plans = []
     item.rotate if rotate
-    if item.width == @width && item.depth == @depth then
+    if item.width > @width || item.depth > @depth then
+      # overflow
+    elsif item.width == @width && item.depth == @depth then
       inner = []
       plans << { :rotate => rotate, :inner => inner }
-    elsif item.width != @width && item.depth == @depth then
+    elsif item.width > @width && item.depth == @depth then
       inner = [Rect.new(@height, @width - item.width, @depth)]
       plans << { :rotate => rotate, :inner => inner }
-    elsif item.width == @width && item.depth != @depth then
+    elsif item.width == @width && item.depth > @depth then
       inner = [Rect.new(@height, @width, @depth - item.depth)]
       plans << { :rotate => rotate, :inner => inner }
     else
@@ -125,6 +128,16 @@ class Rect
     }
     _info
   end
+  def volume
+    volume = 0;
+    if @item then
+      volume += @item.volume
+    end
+    @inner.each{|rect|
+      volume += rect.volume
+    }
+    volume
+  end
 end
 
 class Item
@@ -154,6 +167,9 @@ class Item
   end
   def to_s
     "Item: #{@name}(#{size})" + (@rotate ? "*R" : "")
+  end
+  def volume
+    @height * @width * @depth
   end
 end
 
